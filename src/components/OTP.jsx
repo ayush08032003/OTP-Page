@@ -1,5 +1,16 @@
 import { useRef, useState } from "react";
 
+/**
+ * OTP Component for rendering an OTP (One-Time Password) input with a dynamic number of input fields.
+ * 
+ * @param {Object} props
+ * @param {number} props.number - The number of OTP input fields to render.
+ * @param {string} [props.className] - Optional additional CSS class names to style the input fields.
+ * @param {string[]} props.values - An array of current OTP input values, where each element represents a value of an OTP digit.
+ * @param {function} props.setValues - A function to update the OTP values, typically passed down from the parent component.
+ * 
+ * @returns {JSX.Element} A rendered OTP input component with `number` input fields.
+ */
 export function OTP({ number, className, values, setValues }) {
   const itemEle = useRef([]);
 
